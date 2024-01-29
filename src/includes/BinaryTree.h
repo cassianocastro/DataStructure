@@ -14,9 +14,45 @@
 typedef struct nodo
 {
     char info;
+
     struct nodo* esquerda;
     struct nodo* direita;
 }
 nodo;
+
+/**
+ *
+ */
+nodo* createNodo(char);
+
+/**
+ * Inclusao de um nodo na Arvore
+ */
+void insere_folha(nodo**, char);
+
+/**
+ * Caminhamento pre-ordem
+ */
+void pre_ordem(nodo*);
+
+/**
+ * Caminhamento em-ordem
+ */
+void em_ordem(nodo*);
+
+/**
+ * Caminhamento pos-ordem
+ */
+void pos_ordem(nodo*);
+
+/**
+ *
+ */
+void pesquisar_nodo(nodo*, char);
+
+/**
+ *
+ */
+void createMenu();
 
 #endif
