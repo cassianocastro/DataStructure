@@ -15,9 +15,8 @@ No;
 
 No* createElement(int age)
 {
-    No* newElement;
+    No* newElement = (No*) malloc(sizeof(No));
 
-    newElement = (No*) malloc(sizeof(No));
     newElement->idade    = age;
     newElement->proximo  = NULL;
     newElement->anterior = NULL;
