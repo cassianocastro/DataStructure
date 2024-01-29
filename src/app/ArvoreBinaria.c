@@ -1,19 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <locale.h>
-#include <iso646.h>
-#include <stdbool.h>
-
-/**
- *
- */
-typedef struct nodo
-{
-    char info;
-    struct nodo* esquerda;
-    struct nodo* direita;
-}
-nodo;
+#include "../includes/BinaryTree.h"
 
 /**
  *
