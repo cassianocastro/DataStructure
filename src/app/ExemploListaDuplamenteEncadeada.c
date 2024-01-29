@@ -1,17 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <stdbool.h>
-#include <iso646.h>
-#include <locale.h>
-
-typedef struct No
-{
-    int idade;
-
-    struct No* proximo;
-    struct No* anterior;
-}
-No;
+#include "../includes/DequeExample.h"
 
 No* createElement(int age)
 {
