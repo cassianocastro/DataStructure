@@ -14,7 +14,7 @@ nodo;
 
 nodo* createNodo(char info)
 {
-    nodo* novo     = malloc( sizeof(nodo) );
+    nodo* novo = malloc(sizeof(nodo));
 
     novo->info     = info;
     novo->esquerda = NULL;
@@ -162,9 +162,9 @@ int main(int argc, char const *argv[])
     while ( true )
 	{
         createMenu();
-        scanf( "%i", &option );
+        scanf("%i", &option);
 
-        system( "clear" );
+        system("clear");
 
         switch ( option )
 		{
@@ -197,12 +197,12 @@ int main(int argc, char const *argv[])
                 pesquisar_nodo(arv, info);
                 break;
             case 0:
-                exit( EXIT_SUCCESS );
+                exit(EXIT_SUCCESS);
                 break;
             default:
                 puts("Opção inválida!");
         }
     }
 
-    return ( EXIT_SUCCESS );
+    return EXIT_SUCCESS;
 }
