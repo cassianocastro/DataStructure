@@ -226,4 +226,6 @@ int main(void)
     puts("\n\nRemovendo 3...");
     list = removeElement(list, 1);
     showList(list);
+
+    return EXIT_SUCCESS;
 }
