@@ -159,22 +159,22 @@ void pesquisar_nodo(nodo* arv, char pesq)
 void createMenu()
 {
     printf(
-        "Operações sobre Árvores\n"
-        "Selecione a opção desejada:\n"
-        "1. Incluir Folha\n"
-        "2. Caminhar em Pré-Ordem\n"
-        "3. Caminhar em Ordem\n"
-        "4. Caminhar em Pós-Ordem\n"
-        "5. Pesquisar nodos na Árvore\n"
-        "0. Sair\n"
-        "Opção? "
+        "\nOperações sobre Árvores"
+        "\nSelecione a opção desejada:"
+        "\n1. Incluir Folha"
+        "\n2. Caminhar em Pré-Ordem"
+        "\n3. Caminhar em Ordem"
+        "\n4. Caminhar em Pós-Ordem"
+        "\n5. Pesquisar nodos na Árvore"
+        "\n0. Sair"
+        "\nOpção\? "
     );
 }
 
 /**
  *
  */
-int main(int argc, char const *argv[])
+int main(int argc, const char** argv)
 {
     setlocale(LC_ALL, "");
 
