@@ -26,7 +26,7 @@ No;
 No* createElement(int);
 
 /**
- *
+ * Insert in the beginning of the list
  */
 No* setFirst(No*, No*);
 
