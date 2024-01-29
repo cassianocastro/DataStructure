@@ -13,7 +13,6 @@ No* createElement(int age)
     return newElement;
 }
 
-//Funcao abaixo insere no inicio da lista
 No* setFirst(No* list, No* novo)
 {
     if ( list != NULL )
