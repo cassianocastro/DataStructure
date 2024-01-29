@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include <iso646.h>
 #include <locale.h>
-//OK
+
 typedef struct No
 {
     int idade;
@@ -17,7 +17,7 @@ No* createElement(int age)
 {
     No* newElement;
 
-    newElement = (No*) malloc( sizeof(No) );
+    newElement = (No*) malloc(sizeof(No));
     newElement->idade    = age;
     newElement->proximo  = NULL;
     newElement->anterior = NULL;
@@ -173,7 +173,7 @@ No* add(No* list, No* novo, int posicao)
     return list;
 }
 
-int main( void )
+int main(void)
 {
     setlocale(LC_ALL, "portuguese-brazilian");
     // Criando referencia para a lista
