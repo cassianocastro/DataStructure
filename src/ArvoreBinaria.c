@@ -4,6 +4,9 @@
 #include <iso646.h>
 #include <stdbool.h>
 
+/**
+ *
+ */
 typedef struct nodo
 {
     char info;
@@ -12,6 +15,9 @@ typedef struct nodo
 }
 nodo;
 
+/**
+ *
+ */
 nodo* createNodo(char info)
 {
     nodo* novo = malloc(sizeof(nodo));
@@ -23,7 +29,9 @@ nodo* createNodo(char info)
     return novo;
 }
 
-//Inclusao de um nodo na Arvore
+/**
+ * Inclusao de um nodo na Arvore
+ */
 void insere_folha(nodo** arv, char info)
 {
     if ( *arv == NULL )
@@ -47,7 +55,9 @@ void insere_folha(nodo** arv, char info)
     }
 }
 
-//Caminhamento pre-ordem
+/**
+ * Caminhamento pre-ordem
+ */
 void pre_ordem(nodo* arv)
 {
     if ( arv != NULL )
@@ -68,7 +78,9 @@ void pre_ordem(nodo* arv)
     }
 }
 
-//Caminhamento em-ordem
+/**
+ * Caminhamento em-ordem
+ */
 void em_ordem(nodo* arv)
 {
     if ( arv != NULL )
@@ -89,7 +101,9 @@ void em_ordem(nodo* arv)
     }
 }
 
-//Caminhamento pos-ordem
+/**
+ * Caminhamento pos-ordem
+ */
 void pos_ordem(nodo * arv)
 {
     if ( arv != NULL )
@@ -110,6 +124,9 @@ void pos_ordem(nodo * arv)
     }
 }
 
+/**
+ *
+ */
 void pesquisar_nodo(nodo* arv, char pesq)
 {
     if ( arv != NULL )
@@ -136,6 +153,9 @@ void pesquisar_nodo(nodo* arv, char pesq)
         puts("Nodo não encontrado.");
 }
 
+/**
+ *
+ */
 void createMenu()
 {
     printf(
@@ -151,6 +171,9 @@ void createMenu()
     );
 }
 
+/**
+ *
+ */
 int main(int argc, char const *argv[])
 {
     setlocale(LC_ALL, "");
