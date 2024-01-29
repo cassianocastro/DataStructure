@@ -15,7 +15,7 @@ nodo* createNodo(char info)
 }
 
 /**
- * Inclusao de um nodo na Arvore
+ *
  */
 void insere_folha(nodo** arv, char info)
 {
@@ -41,7 +41,7 @@ void insere_folha(nodo** arv, char info)
 }
 
 /**
- * Caminhamento pre-ordem
+ *
  */
 void pre_ordem(nodo* arv)
 {
@@ -64,7 +64,7 @@ void pre_ordem(nodo* arv)
 }
 
 /**
- * Caminhamento em-ordem
+ *
  */
 void em_ordem(nodo* arv)
 {
@@ -87,9 +87,9 @@ void em_ordem(nodo* arv)
 }
 
 /**
- * Caminhamento pos-ordem
+ *
  */
-void pos_ordem(nodo * arv)
+void pos_ordem(nodo* arv)
 {
     if ( arv != NULL )
     {
