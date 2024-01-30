@@ -29,15 +29,16 @@ typedef struct
 }
 descritor;
 
-element* createElement( void )
+element* createElement(void)
 {
     int value = 0;
 
-    printf ("Informe um valor para o novo elemento da fila: ");
-    scanf  ("%d", &value);
+    printf("Informe um valor para o novo elemento da fila: ");
+    scanf("%d", &value);
 
-    element* newElement     = malloc( sizeof(element) );
-    newElement->value       = value;
+    element* newElement = malloc(sizeof(element));
+
+    newElement->value = value;
     newElement->pointerToNext = NULL;
 
     return newElement;
@@ -72,7 +73,8 @@ void deQueue(descritor* desc)
 {
     if ( not isEmpty(desc) )
     {
-        element* helper           = desc->pointerToBeginQueue;
+        element* helper = desc->pointerToBeginQueue;
+
         desc->pointerToBeginQueue = helper->pointerToNext;
 
         // Se o elemento era unico na fila, atualiza o final da fila tamb�m para NULL:
@@ -107,9 +109,9 @@ void showQueue(descritor* desc)
         puts("Fila Vazia.");
 }
 
-void createMenu( void )
+void createMenu(void)
 {
-    printf (
+    printf(
         "\n Operações sobre Filas \n"
         "Selecione a opção desejada: \n"
         "1. Incluir | 2. Excluir | 3. Exibir | 0. Sair\n"
@@ -117,28 +119,29 @@ void createMenu( void )
     );
 }
 
-int main( void )
+int main(void)
 {
     setlocale(LC_ALL, "portuguese-brazilian");
 
     Options option;
 
-    element* newElement       = NULL;
-    descritor* desc           = (descritor*) malloc ( sizeof(descritor) );
+    element* newElement = NULL;
+    descritor* desc = (descritor*) malloc(sizeof(descritor));
+
     desc->pointerToBeginQueue = NULL;
     desc->pointerToEndQueue   = NULL;
 
     while ( true )
     {
         createMenu();
-        scanf ( "%d", &option );
+        scanf("%d", &option);
 
         system("clear");
 
         switch ( option )
         {
             case EXIT:
-                exit( EXIT_SUCCESS );
+                exit(EXIT_SUCCESS);
                 break;
             case CREATE:
                 newElement = createElement();
