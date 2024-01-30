@@ -3,7 +3,7 @@
 /**
  *
  */
-int main(int argc, char const *argv[])
+int main(int argc, const char** argv)
 {
 	setlocale(LC_ALL, "");
 
@@ -39,4 +39,6 @@ int main(int argc, char const *argv[])
                 puts("Opção inválida.");
         }
     }
+
+    return EXIT_SUCCESS;
 }
