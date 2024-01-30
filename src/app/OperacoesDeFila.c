@@ -3,7 +3,10 @@
 #include <stdbool.h>
 #include <iso646.h>
 #include <locale.h>
-//OK
+
+/**
+ *
+ */
 typedef enum
 {
     EXIT,
@@ -13,6 +16,9 @@ typedef enum
 }
 Options;
 
+/**
+ *
+ */
 typedef struct
 {
     int value;
@@ -21,7 +27,10 @@ typedef struct
 }
 element;
 
-//Definicao do descritor. Ponteiros que armazezam o inicio e o final da fila
+/**
+ * Definicao do descritor.
+ * Ponteiros que armazezam o inicio e o final da fila
+ */
 typedef struct
 {
     struct element* pointerToBeginQueue;
