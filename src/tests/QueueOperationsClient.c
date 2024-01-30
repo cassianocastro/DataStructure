@@ -1,13 +1,18 @@
 #include "../includes/QueueOperations.h"
 
-void createMenu(void)
+unsigned int createMenu(void)
 {
+    unsigned int option = 0u;
+
     printf(
         "\nOperações sobre Filas"
         "\nSelecione a opção desejada:"
         "\n1. Incluir | 2. Excluir | 3. Exibir | 0. Sair"
         "\nOpção\? "
     );
+    scanf("%d", &option);
+
+    return option;
 }
 
 /**
@@ -17,7 +22,7 @@ int main(void)
 {
     setlocale(LC_ALL, "");
 
-    Options option;
+    unsigned int option = 0u;
 
     element* newElement = NULL;
     descritor* desc = (descritor*) malloc(sizeof(descritor));
@@ -27,8 +32,7 @@ int main(void)
 
     while ( true )
     {
-        createMenu();
-        scanf("%d", &option);
+        option = createMenu();
 
         system("clear");
 

@@ -1,13 +1,18 @@
 #include "../includes/Stack.h"
 
-void createMenu(void)
+unsigned int createMenu(void)
 {
+    unsigned int option = 0u;
+
     printf(
         "\nOperações sobre Pilhas"
         "\nSelecione a opção desejada:"
         "\n1. Incluir | 2. Excluir | 3. Mostrar Pilha | 0. Sair"
         "\nOpção\? "
     );
+    scanf("%d", &option);
+
+    return option;
 }
 
 /**
@@ -17,15 +22,14 @@ int main(int argc, const char** argv)
 {
 	setlocale(LC_ALL, "");
 
-	Options option;
+	unsigned int option = 0u;
     int valor = 0;
     element* topo     = NULL;
     element* excluido = NULL;
 
     while ( true )
 	{
-        createMenu();
-        scanf("%d", &option);
+        option = createMenu();
 
         system("clear");
 

@@ -3,8 +3,10 @@
 /**
  *
  */
-void createMenu(void)
+unsigned int createMenu(void)
 {
+    unsigned int option = 0u;
+
     printf(
         "\nOperações sobre Árvores"
         "\nSelecione a opção desejada:"
@@ -16,6 +18,9 @@ void createMenu(void)
         "\n0. Sair"
         "\nOpção\? "
     );
+    scanf("%i", &option);
+
+    return option;
 }
 
 /**
@@ -25,14 +30,13 @@ int main(int argc, const char** argv)
 {
     setlocale(LC_ALL, "");
 
-    int option = 0;
+    unsigned int option = 0u;
     char info  = '\0';
     nodo* arv  = NULL;
 
     while ( true )
 	{
-        createMenu();
-        scanf("%i", &option);
+        option = createMenu();
 
         system("clear");
 
