@@ -21,9 +21,10 @@ typedef struct
 }
 element;
 
-element* createElement( element* topo, int valor )
+element* createElement(element* topo, int valor)
 {
-    element* novo  = malloc( sizeof(element) );
+    element* novo  = malloc(sizeof(element));
+
     novo->valor    = valor;
     novo->anterior = NULL;
 
@@ -31,9 +32,10 @@ element* createElement( element* topo, int valor )
 }
 
 // Inserir elementos na pilha
-element* push( element* topo, int valor )
+element* push(element* topo, int valor)
 {
     element* aux = topo;
+
     topo = createElement(topo, valor);
     topo->anterior = aux;
 
@@ -45,12 +47,13 @@ bool isEmpty(element* topo)
     return topo == NULL;
 }
 
-element* pop( element* topo )
+element* pop(element* topo)
 {
     if ( not isEmpty(topo) )
     {
         element* aux = topo;
         topo = topo->anterior;
+
         free(aux);
     }
     else
@@ -61,7 +64,7 @@ element* pop( element* topo )
     return topo;
 }
 
-void showStack( element* topo )
+void showStack(element* topo)
 {
     bool isFirst = true;
 
@@ -79,7 +82,7 @@ void showStack( element* topo )
             printf("  |%d|\n", topo->valor);
         }
 
-        if (topo->anterior == NULL)
+        if ( topo->anterior == NULL )
         {
             puts("  ---");
         }
@@ -88,7 +91,7 @@ void showStack( element* topo )
     }
 }
 
-void createMenu( void )
+void createMenu(void)
 {
     printf(
         "Operações sobre Pilhas\n"
@@ -110,25 +113,25 @@ int main(int argc, char const *argv[])
     while ( true )
 	{
         createMenu();
-        scanf ( "%d", &option );
+        scanf("%d", &option);
 
-        system( "clear" );
+        system("clear");
 
-        switch( option )
+        switch ( option )
 		{
             case PUSH:
                 printf("Informe um valor para o novo elemento da pilha: ");
-                scanf ("%d", &valor);
+                scanf("%d", &valor);
                 topo = push(topo, valor);
                 break;
             case POP:
                 topo = pop(topo);
                 break;
             case SHOWSTACK:
-                (not isEmpty( topo )) ? showStack(topo) : puts("Pilha Vazia.");
+                ( not isEmpty(topo) ) ? showStack(topo) : puts("Pilha Vazia.");
                 break;
             case EXIT:
-                exit( EXIT_SUCCESS );
+                exit(EXIT_SUCCESS);
                 break;
             default:
                 puts("Opção inválida.");
