@@ -83,9 +83,9 @@ void showQueue(descritor* desc)
 void createMenu(void)
 {
     printf(
-        "\n Operações sobre Filas \n"
-        "Selecione a opção desejada: \n"
-        "1. Incluir | 2. Excluir | 3. Exibir | 0. Sair\n"
-        "Opção: "
+        "\nOperações sobre Filas"
+        "\nSelecione a opção desejada:"
+        "\n1. Incluir | 2. Excluir | 3. Exibir | 0. Sair"
+        "\nOpção\? "
     );
 }
