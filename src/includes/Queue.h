@@ -1,6 +1,6 @@
-#ifndef FILA_H
+#ifndef QUEUE_H
 
-#define FILA_H
+#define QUEUE_H
 
 #include <stdio.h>
 #include <stdlib.h>
