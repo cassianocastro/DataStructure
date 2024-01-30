@@ -6,20 +6,27 @@
 
 typedef enum
 {
-    EXIT, PUSH, POP, SHOWSTACK
-} Options;
+    EXIT,
+    PUSH,
+    POP,
+    SHOWSTACK
+}
+Options;
 
 typedef struct
 {
     int valor;
+
     struct element* anterior;
-} element;
+}
+element;
 
 element* createElement( element* topo, int valor )
 {
     element* novo  = malloc( sizeof(element) );
     novo->valor    = valor;
     novo->anterior = NULL;
+
     return novo;
 }
 
@@ -29,6 +36,7 @@ element* push( element* topo, int valor )
     element* aux = topo;
     topo = createElement(topo, valor);
     topo->anterior = aux;
+
     return topo;
 }
 
@@ -39,12 +47,17 @@ bool isEmpty(element* topo)
 
 element* pop( element* topo )
 {
-    if ( not isEmpty(topo) ) {
+    if ( not isEmpty(topo) )
+    {
         element* aux = topo;
         topo = topo->anterior;
         free(aux);
-    } else
+    }
+    else
+    {
         puts("A pilha está vazia!");
+    }
+
     return topo;
 }
 
@@ -56,14 +69,20 @@ void showStack( element* topo )
 	{
         puts("  ---");
 
-	    if ( isFirst ) {
+	    if ( isFirst )
+        {
             printf("  |%d| <---- Topo \n", topo->valor);
             isFirst = false;
-        } else
+        }
+        else
+        {
             printf("  |%d|\n", topo->valor);
+        }
 
         if (topo->anterior == NULL)
+        {
             puts("  ---");
+        }
 
         topo = topo->anterior;
     }
@@ -92,7 +111,9 @@ int main(int argc, char const *argv[])
 	{
         createMenu();
         scanf ( "%d", &option );
+
         system( "clear" );
+
         switch( option )
 		{
             case PUSH:
