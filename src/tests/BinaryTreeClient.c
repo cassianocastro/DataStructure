@@ -3,7 +3,7 @@
 /**
  *
  */
-void createMenu()
+void createMenu(void)
 {
     printf(
         "\nOperações sobre Árvores"
