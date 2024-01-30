@@ -3,65 +3,95 @@
 #include <stdbool.h>
 #include <iso646.h>
 //OK
-typedef enum {
-    EXIT, PUSH, POP, SHOWSTACK
-} Options;
+typedef enum
+{
+    EXIT,
+    PUSH,
+    POP,
+    SHOWSTACK
+}
+Options;
 
-typedef struct {
+typedef struct
+{
     int valor;
+
     struct element* anterior;
-} element;
+}
+element;
 
-element* createElement( element* topo, int valor ){
-
+element* createElement( element* topo, int valor )
+{
     element* novo  = malloc( sizeof(element) );
+
     novo->valor    = valor;
     novo->anterior = NULL;
+
     return novo;
 }
 
 //Inserir elementos na pilha
-element* push( element* topo, int valor ){
+element* push( element* topo, int valor )
+{
     element* aux = topo;
+
     topo = createElement(topo, valor);
     topo->anterior = aux;
+
     return topo;
 }
 
-bool isEmpty(element* topo){
+bool isEmpty(element* topo)
+{
     return topo == NULL;
 }
 
-element* pop( element* topo ){
-
-    if ( not isEmpty(topo) ){
+element* pop( element* topo )
+{
+    if ( not isEmpty(topo) )
+    {
         element* aux = topo;
         topo = topo->anterior;
+
         free(aux);
-    }else
+    }
+    else
+    {
         puts("A pilha está vazia!");
+    }
+
     return topo;
 }
 
-void showStack( element* topo ){
+void showStack( element* topo )
+{
     bool isFirst = true;
 
-    while ( topo != NULL ){
+    while ( topo != NULL )
+    {
         puts("  ---");
-        if ( isFirst ) {
+
+        if ( isFirst )
+        {
             printf("  |%d| <---- Topo \n", topo->valor);
             isFirst = false;
-        }else
+        }
+        else
+        {
             printf("  |%d|\n", topo->valor);
+        }
 
         if (topo->anterior == NULL)
+        {
             puts("  ---");
+        }
 
         topo = topo->anterior;
     }
 }
 
-void createMenu( void ) {
+void createMenu( void )
+{
     printf(
         "Operações sobre Pilhas\n"
         "Selecione a opção desejada:\n"
@@ -70,17 +100,21 @@ void createMenu( void ) {
     );
 }
 
-int main( void ) {
+int main( void )
+{
     Options option;
     int valor = 0;
     element* topo     = NULL;
     element* excluido = NULL;
 
-    while ( true ) {
+    while ( true )
+    {
         createMenu();
         scanf ( "%d", &option );
         system( "clear" );
-        switch( option ){
+
+        switch( option )
+        {
             case PUSH:
                 printf("Informe um valor para o novo elemento da pilha: ");
                 scanf ("%d", &valor);
