@@ -3,6 +3,9 @@
 #include <locale.h>
 #include <iso646.h>
 
+/**
+ *
+ */
 typedef struct No
 {
     int idade;
@@ -10,6 +13,36 @@ typedef struct No
     struct No* prox;
 }
 No;
+
+/**
+ *
+ */
+No* createElement(int);
+
+/**
+ *
+ */
+No* setFirst(No*, No*);
+
+/**
+ *
+ */
+No* setLast(No*, No*);
+
+/**
+ *
+ */
+No* delElement(No*, int);
+
+/**
+ *
+ */
+void showList(No*);
+
+/**
+ *
+ */
+No* setIndex(No*, No*, int);
 
 No* createElement(int idade)
 {
