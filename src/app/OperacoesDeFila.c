@@ -79,13 +79,3 @@ void showQueue(descritor* desc)
     else
         puts("Fila Vazia.");
 }
-
-void createMenu(void)
-{
-    printf(
-        "\nOperações sobre Filas"
-        "\nSelecione a opção desejada:"
-        "\n1. Incluir | 2. Excluir | 3. Exibir | 0. Sair"
-        "\nOpção\? "
-    );
-}

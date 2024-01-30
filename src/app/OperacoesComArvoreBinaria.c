@@ -119,18 +119,3 @@ void pesquisar_nodo(nodo* arv, char pesq)
     else
         puts("Nodo não encontrado.");
 }
-
-void createMenu(void)
-{
-    printf(
-        "\nOperações sobre Árvores"
-        "\nSelecione a opção desejada:"
-        "\n1. Incluir Folha"
-        "\n2. Caminhar em Pré-Ordem"
-        "\n3. Caminhar em Ordem"
-        "\n4. Caminhar em Pós-Ordem"
-        "\n5. Pesquisar nodos na Árvore"
-        "\n0. Sair"
-        "\nOpção\? "
-    );
-}
