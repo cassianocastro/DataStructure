@@ -1,5 +1,8 @@
 #include "../includes/QueueOperations.h"
 
+/**
+ *
+ */
 int main(void)
 {
     setlocale(LC_ALL, "");
@@ -38,4 +41,6 @@ int main(void)
                 puts("Opção inválida!");
         }
     }
+
+    return EXIT_SUCCESS;
 }
