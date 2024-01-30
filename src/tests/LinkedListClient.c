@@ -9,11 +9,11 @@ int main(int argc, const char** argv)
 
 	No* lista = NULL;
 
-    No* n     = createElement(35);
-    No* n2    = createElement(50);
-    No* n3    = createElement(30);
-    No* n4    = createElement(55);
-    No* n5    = createElement(3);
+    No* n  = createElement(35);
+    No* n2 = createElement(50);
+    No* n3 = createElement(30);
+    No* n4 = createElement(55);
+    No* n5 = createElement(3);
 
     puts("\nInserindo na última posição da lista os elementos 35 e 50:");
 
