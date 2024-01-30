@@ -20,6 +20,15 @@ unsigned int createMenu(void)
     return option;
 }
 
+void clearConsole(void)
+{
+#ifdef WIN32
+    system("cls");
+#elif LINUX
+    system("clear");
+#endif
+}
+
 /**
  *
  */
@@ -35,7 +44,7 @@ int main(int argc, const char** argv)
 	{
         option = createMenu();
 
-        system("clear");
+        clearConsole();
 
         switch ( option )
 		{
