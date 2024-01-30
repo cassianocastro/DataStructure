@@ -1,8 +1,5 @@
 #include "../includes/BinaryTree.h"
 
-/**
- *
- */
 unsigned int createMenu(void)
 {
     unsigned int option = 0u;
