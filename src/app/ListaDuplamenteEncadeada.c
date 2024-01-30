@@ -17,7 +17,7 @@ No* createElement(int age)
 {
     No* newElement;
 
-    newElement = (No*) malloc( sizeof(No) );
+    newElement = (No*) malloc(sizeof(No));
     newElement->idade    = age;
     newElement->proximo  = NULL;
     newElement->anterior = NULL;
@@ -117,6 +117,7 @@ No* removeElement(No* lista, int posicao)
             if ( auxiliar == NULL )
             {
                 printf("A lista nao tem %d elementos \n", posicao);
+
                 return lista;
             }
 
@@ -132,7 +133,8 @@ No* removeElement(No* lista, int posicao)
                     ->anterior = auxiliar->anterior;
             }
         }
-        free( auxiliar );
+
+        free(auxiliar);
     }
     else
     {
