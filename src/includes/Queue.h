@@ -71,6 +71,6 @@ void showQueue(descritor*);
 /**
  *
  */
-void createMenu(void);
+unsigned int createMenu(void);
 
 #endif

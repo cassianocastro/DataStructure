@@ -53,6 +53,6 @@ void pesquisar_nodo(nodo*, char);
 /**
  *
  */
-void createMenu(void);
+unsigned int createMenu(void);
 
 #endif
