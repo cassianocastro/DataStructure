@@ -20,9 +20,9 @@ typedef struct
 }
 element;
 
-element* createElement( element* topo, int valor )
+element* createElement(element* topo, int valor)
 {
-    element* novo  = malloc( sizeof(element) );
+    element* novo  = malloc(sizeof(element));
 
     novo->valor    = valor;
     novo->anterior = NULL;
@@ -31,7 +31,7 @@ element* createElement( element* topo, int valor )
 }
 
 //Inserir elementos na pilha
-element* push( element* topo, int valor )
+element* push(element* topo, int valor)
 {
     element* aux = topo;
 
@@ -46,7 +46,7 @@ bool isEmpty(element* topo)
     return topo == NULL;
 }
 
-element* pop( element* topo )
+element* pop(element* topo)
 {
     if ( not isEmpty(topo) )
     {
@@ -63,7 +63,7 @@ element* pop( element* topo )
     return topo;
 }
 
-void showStack( element* topo )
+void showStack(element* topo)
 {
     bool isFirst = true;
 
@@ -90,7 +90,7 @@ void showStack( element* topo )
     }
 }
 
-void createMenu( void )
+void createMenu(void)
 {
     printf(
         "Operações sobre Pilhas\n"
@@ -100,7 +100,7 @@ void createMenu( void )
     );
 }
 
-int main( void )
+int main(void)
 {
     Options option;
     int valor = 0;
@@ -110,24 +110,25 @@ int main( void )
     while ( true )
     {
         createMenu();
-        scanf ( "%d", &option );
-        system( "clear" );
+        scanf("%d", &option);
+        system("clear");
 
-        switch( option )
+        switch ( option )
         {
             case PUSH:
                 printf("Informe um valor para o novo elemento da pilha: ");
-                scanf ("%d", &valor);
+                scanf("%d", &valor);
+
                 topo = push(topo, valor);
                 break;
             case POP:
                 topo = pop(topo);
                 break;
             case SHOWSTACK:
-                (not isEmpty( topo )) ? showStack(topo) : puts("Pilha Vazia.");
+                ( not isEmpty(topo) ) ? showStack(topo) : puts("Pilha Vazia.");
                 break;
             case EXIT:
-                exit( EXIT_SUCCESS );
+                exit(EXIT_SUCCESS);
                 break;
             default:
                 puts("Opção inválida.");
