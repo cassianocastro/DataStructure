@@ -6,36 +6,44 @@
 typedef struct No
 {
     int idade;
+
     struct No* prox;
-} No;
+}
+No;
 
 No* createElement(int idade)
 {
-
     No* novo = (No*) malloc( sizeof(No) );
+
     novo->idade = idade;
     novo->prox  = NULL;
+
     return novo;
 }
 
 No* setFirst(No* lista, No* novo)
 {
     novo->prox = lista;
+
     return novo;
 }
 
 No* setLast(No* lista, No* novo)
 {
-    if ( lista != NULL ) {
+    if ( lista != NULL )
+    {
         No* aux = lista;
 
-		while (aux->prox != NULL)
+		while ( aux->prox != NULL )
 		{
             aux = aux->prox;
         }
+
         aux->prox = novo;
+
         return lista;
     }
+
     return novo;
 }
 
@@ -45,8 +53,10 @@ No* delElement(No* lista, int posicao)
     No* remove = NULL;
     int cont   = 1;
 
-    if (lista == NULL)
+    if ( lista == NULL )
+    {
         return NULL;
+    }
 
     while ( aux->prox != NULL and cont < (posicao - 1) )
 	{
@@ -62,17 +72,23 @@ No* delElement(No* lista, int posicao)
 		Quando for mais de um, atualizar a lista para o novo primeiro ou
 		(b) ser o unico na lista
 	*/
-    if ( cont == 1 ) {
+    if ( cont == 1 )
+    {
         if ( aux->prox != NULL )
             lista = aux->prox; // atualiza o inicio.
         else
             lista = NULL;      // caso só exista na lista o proprio a ser removido
+
         free(aux);
-    } else {
+    }
+    else
+    {
         remove = aux->prox;
         aux->prox = remove->prox;
+
         free(remove);
     }
+
     return lista;
 }
 
@@ -83,6 +99,7 @@ void showList(No* lista)
         printf("%.2d | ", lista->idade);
         lista = lista->prox;
     }
+
     printf("\n");
 }
 
@@ -92,7 +109,9 @@ No* setIndex(No* lista, No* novo, int posicao)
     int cont = 1;
 
     if ( lista == NULL )
+    {
         return novo;
+    }
 
     while ( aux->prox != NULL and cont < (posicao - 1) )
 	{
@@ -104,7 +123,10 @@ No* setIndex(No* lista, No* novo, int posicao)
     aux->prox  = novo;
 
     if ( posicao == 1 )
+    {
         return novo;
+    }
+
     return lista;
 }
 
