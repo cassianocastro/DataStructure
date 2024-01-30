@@ -49,7 +49,7 @@ void pesquisar_nodo(nodo*, char);
 /**
  *
  */
-void createMenu();
+void createMenu(void);
 
 nodo* createNodo(char info)
 {
@@ -170,7 +170,7 @@ void pesquisar_nodo(nodo* arv, char pesq)
         puts("Nodo não encontrado.");
 }
 
-void createMenu()
+void createMenu(void)
 {
     printf(
         "\nOperações sobre Árvores"
