@@ -53,7 +53,8 @@ void createMenu(void);
 
 nodo* createNodo(char info)
 {
-    nodo* novo     = malloc(sizeof(nodo));
+    nodo* novo = (nodo*) malloc(sizeof(nodo));
+
     novo->info     = info;
     novo->esquerda = NULL;
     novo->direita  = NULL;
