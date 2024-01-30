@@ -73,7 +73,7 @@ void showStack(element* topo)
 
         if ( isFirst )
         {
-            printf("  |%d| <---- Topo \n", topo->valor);
+            printf("  |%d| <---- Topo\n", topo->valor);
             isFirst = false;
         }
         else
@@ -93,10 +93,10 @@ void showStack(element* topo)
 void createMenu(void)
 {
     printf(
-        "Operações sobre Pilhas\n"
-        "Selecione a opção desejada:\n"
-        "1.Incluir | 2.Excluir | 3.Mostrar Pilha | 0.Sair\n"
-        "Opção? "
+        "\nOperações sobre Pilhas"
+        "\nSelecione a opção desejada:"
+        "\n1. Incluir | 2. Excluir | 3. Mostrar Pilha | 0. Sair"
+        "\nOpção\? "
     );
 }
 
