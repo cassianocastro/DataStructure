@@ -1,8 +1,5 @@
 #include "../includes/BinaryTree.h"
 
-/**
- *
- */
 nodo* createNodo(char info)
 {
     nodo* novo = (nodo*) malloc(sizeof(nodo));
@@ -14,9 +11,6 @@ nodo* createNodo(char info)
     return novo;
 }
 
-/**
- *
- */
 void insere_folha(nodo** arv, char info)
 {
     if ( *arv == NULL )
@@ -40,9 +34,6 @@ void insere_folha(nodo** arv, char info)
     }
 }
 
-/**
- *
- */
 void pre_ordem(nodo* arv)
 {
     if ( arv != NULL )
@@ -63,9 +54,6 @@ void pre_ordem(nodo* arv)
     }
 }
 
-/**
- *
- */
 void em_ordem(nodo* arv)
 {
     if ( arv != NULL )
@@ -86,9 +74,6 @@ void em_ordem(nodo* arv)
     }
 }
 
-/**
- *
- */
 void pos_ordem(nodo* arv)
 {
     if ( arv != NULL )
@@ -109,9 +94,6 @@ void pos_ordem(nodo* arv)
     }
 }
 
-/**
- *
- */
 void pesquisar_nodo(nodo* arv, char pesq)
 {
     if ( arv != NULL )
