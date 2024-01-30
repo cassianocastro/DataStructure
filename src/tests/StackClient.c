@@ -1,5 +1,15 @@
 #include "../includes/Stack.h"
 
+void createMenu(void)
+{
+    printf(
+        "\nOperações sobre Pilhas"
+        "\nSelecione a opção desejada:"
+        "\n1. Incluir | 2. Excluir | 3. Mostrar Pilha | 0. Sair"
+        "\nOpção\? "
+    );
+}
+
 /**
  *
  */
