@@ -7,7 +7,7 @@ element* createElement(void)
     printf("Informe um valor para o novo elemento da fila: ");
     scanf("%d", &value);
 
-    element* newElement = malloc(sizeof(element));
+    element* newElement = (element*) malloc(sizeof(element));
 
     newElement->value = value;
     newElement->pointerToNext = NULL;
