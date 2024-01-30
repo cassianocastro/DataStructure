@@ -38,6 +38,36 @@ typedef struct
 }
 descritor;
 
+/**
+ *
+ */
+element* createElement(void);
+
+/**
+ *
+ */
+bool isEmpty(descritor*);
+
+/**
+ *
+ */
+void enQueue(descritor*, element*);
+
+/**
+ *
+ */
+void deQueue(descritor*);
+
+/**
+ *
+ */
+void showQueue(descritor*);
+
+/**
+ *
+ */
+void createMenu(void);
+
 element* createElement(void)
 {
     int value = 0;
