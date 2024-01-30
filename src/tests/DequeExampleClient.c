@@ -5,7 +5,8 @@
  */
 int main(void)
 {
-    setlocale(LC_ALL, "portuguese-brazilian");
+    setlocale(LC_ALL, "");
+
     // Criando referencia para a lista
     No* list = NULL;
 

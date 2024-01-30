@@ -20,7 +20,7 @@ void createMenu(void)
  */
 int main(void)
 {
-    setlocale(LC_ALL, "portuguese-brazilian");
+    setlocale(LC_ALL, "");
 
     int option = 0;
     char info  = '\0';
