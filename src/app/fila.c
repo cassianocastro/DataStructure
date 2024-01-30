@@ -1,34 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
-#include <iso646.h>
-#include <locale.h>
-
-typedef enum
-{
-    EXIT,
-    CREATE,
-    DELETE,
-    SHOW
-}
-Options;
-
-typedef struct
-{
-    int value;
-
-    struct element* pointerToNext;
-}
-element;
-
-//Definicao do descritor. Ponteiros que armazezam o inicio e o final da fila
-typedef struct
-{
-    struct element* pointerToBeginQueue;
-
-    struct element* pointerToEndQueue;
-}
-descritor;
+#include "../includes/Fila.h"
 
 element* createElement(void)
 {
