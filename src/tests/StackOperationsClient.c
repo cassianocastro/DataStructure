@@ -48,4 +48,6 @@ int main(void)
                 puts("Opção inválida.");
         }
     }
+
+    return EXIT_SUCCESS;
 }

@@ -19,8 +19,9 @@ int main(int argc, const char** argv)
 
     Options option;
 
-    element* newElement       = NULL;
-    descritor* desc           = (descritor*) malloc(sizeof(descritor));
+    element* newElement = NULL;
+    descritor* desc = (descritor*) malloc(sizeof(descritor));
+
     desc->pointerToBeginQueue = NULL;
     desc->pointerToEndQueue   = NULL;
 
@@ -50,4 +51,6 @@ int main(int argc, const char** argv)
                 puts("Opção inválida!");
         }
     }
+
+    return EXIT_SUCCESS;
 }
