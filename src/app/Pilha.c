@@ -59,7 +59,7 @@ void createMenu(void);
 
 element* createElement(element* topo, int valor)
 {
-    element* novo  = malloc(sizeof(element));
+    element* novo  = (element*) malloc(sizeof(element));
 
     novo->valor    = valor;
     novo->anterior = NULL;
