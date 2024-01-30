@@ -3,7 +3,10 @@
 #include <locale.h>
 #include <iso646.h>
 #include <stdbool.h>
-//OK
+
+/**
+ *
+ */
 typedef struct nodo
 {
     char info;
@@ -12,6 +15,41 @@ typedef struct nodo
     struct nodo* direita;
 }
 nodo;
+
+/**
+ *
+ */
+nodo* createNodo(char);
+
+/**
+ * Inclusao de um nodo na Arvore
+ */
+void insere_folha(nodo**, char);
+
+/**
+ * Caminhamento pre-ordem
+ */
+void pre_ordem(nodo*);
+
+/**
+ * Caminhamento em-ordem
+ */
+void em_ordem(nodo*);
+
+/**
+ * Caminhamento pos-ordem
+ */
+void pos_ordem(nodo*);
+
+/**
+ *
+ */
+void pesquisar_nodo(nodo*, char);
+
+/**
+ *
+ */
+void createMenu();
 
 nodo* createNodo(char info)
 {
@@ -23,7 +61,6 @@ nodo* createNodo(char info)
     return novo;
 }
 
-//Inclusao de um nodo na Arvore
 void insere_folha(nodo** arv, char info)
 {
     if ( *arv == NULL )
@@ -47,7 +84,6 @@ void insere_folha(nodo** arv, char info)
     }
 }
 
-//Caminhamento pre-ordem
 void pre_ordem(nodo* arv)
 {
     if ( arv != NULL )
@@ -68,7 +104,6 @@ void pre_ordem(nodo* arv)
     }
 }
 
-//Caminhamento em-ordem
 void em_ordem(nodo* arv)
 {
     if ( arv != NULL )
@@ -89,8 +124,7 @@ void em_ordem(nodo* arv)
     }
 }
 
-//Caminhamento pos-ordem
-void pos_ordem(nodo * arv)
+void pos_ordem(nodo* arv)
 {
     if ( arv != NULL )
     {
