@@ -2,7 +2,7 @@
 
 int main(void)
 {
-    setlocale(LC_ALL, "portuguese-brazilian");
+    setlocale(LC_ALL, "");
 
     Options option;
 
