@@ -15,7 +15,7 @@ nodo;
 
 nodo* createNodo(char info)
 {
-    nodo* novo     = malloc( sizeof(nodo) );
+    nodo* novo     = malloc(sizeof(nodo));
     novo->info     = info;
     novo->esquerda = NULL;
     novo->direita  = NULL;
@@ -52,7 +52,7 @@ void pre_ordem(nodo* arv)
 {
     if ( arv != NULL )
     {
-        printf("%c \n", arv->info);
+        printf("%c\n", arv->info);
 
         if ( arv->esquerda != NULL )
         {
@@ -151,9 +151,9 @@ void createMenu()
     );
 }
 
-int main( void )
+int main(void)
 {
-    setlocale( LC_ALL, "portuguese-brazilian" );
+    setlocale(LC_ALL, "portuguese-brazilian");
 
     int option = 0;
     char info  = '\0';
@@ -163,9 +163,9 @@ int main( void )
     while ( true )
     {
         createMenu();
-        scanf( "%i", &option );
+        scanf("%i", &option);
 
-        system( "clear" );
+        system("clear");
 
         switch ( option )
         {
@@ -174,7 +174,7 @@ int main( void )
                 while ( info != '@' )
                 {
                     printf("Informe a letra a inserir na Árvore (ou @ para sair): ");
-                    scanf( " %c", &info );
+                    scanf(" %c", &info);
 
                     if ( info != '@' ) insere_folha(&arv, info);
                 }
@@ -195,12 +195,12 @@ int main( void )
                 pesquisar_nodo(arv, info);
                 break;
             case 0:
-                exit( EXIT_SUCCESS );
+                exit(EXIT_SUCCESS);
                 break;
             default:
                 puts("Opção inválida!");
         }
     }
 
-    return ( EXIT_SUCCESS );
+    return EXIT_SUCCESS;
 }
