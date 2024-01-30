@@ -1,9 +1,12 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
 #include <iso646.h>
 #include <locale.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
 
+/**
+ *
+ */
 typedef enum
 {
     EXIT,
@@ -13,6 +16,9 @@ typedef enum
 }
 Options;
 
+/**
+ *
+ */
 typedef struct
 {
     int valor;
@@ -20,6 +26,36 @@ typedef struct
     struct element* anterior;
 }
 element;
+
+/**
+ *
+ */
+element* createElement(element*, int);
+
+/**
+ * Add elements in the stack
+ */
+element* push(element*, int);
+
+/**
+ *
+ */
+bool isEmpty(element*);
+
+/**
+ *
+ */
+element* pop(element*);
+
+/**
+ *
+ */
+void showStack(element*);
+
+/**
+ *
+ */
+void createMenu(void);
 
 element* createElement(element* topo, int valor)
 {
@@ -31,7 +67,6 @@ element* createElement(element* topo, int valor)
     return novo;
 }
 
-// Inserir elementos na pilha
 element* push(element* topo, int valor)
 {
     element* aux = topo;
