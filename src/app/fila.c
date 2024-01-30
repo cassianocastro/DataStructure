@@ -6,21 +6,29 @@
 
 typedef enum
 {
-    EXIT, CREATE, DELETE, SHOW
-} Options;
+    EXIT,
+    CREATE,
+    DELETE,
+    SHOW
+}
+Options;
 
 typedef struct
 {
     int value;
+
     struct element* pointerToNext;
-} element;
+}
+element;
 
 //Definicao do descritor. Ponteiros que armazezam o inicio e o final da fila
 typedef struct
 {
     struct element* pointerToBeginQueue;
+
     struct element* pointerToEndQueue;
-} descritor;
+}
+descritor;
 
 element* createElement( void )
 {
@@ -39,17 +47,22 @@ element* createElement( void )
 bool isEmpty(descritor* desc)
 {
     if ( desc->pointerToBeginQueue == NULL )
+    {
         return true;
+    }
 
     return false;
 }
 
 void enQueue(descritor* desc, element* newElement)
 {
-    if ( isEmpty(desc) ) {
+    if ( isEmpty(desc) )
+    {
         desc->pointerToBeginQueue  = newElement;
         desc->pointerToEndQueue    = newElement;
-    } else {
+    }
+    else
+    {
         element* lastElement       = desc->pointerToEndQueue;
         lastElement->pointerToNext = newElement;
         desc->pointerToEndQueue    = newElement;
@@ -58,18 +71,22 @@ void enQueue(descritor* desc, element* newElement)
 
 void deQueue(descritor* desc)
 {
-    if ( not isEmpty(desc) ) {
+    if ( not isEmpty(desc) )
+    {
         element* helper           = desc->pointerToBeginQueue;
         desc->pointerToBeginQueue = helper->pointerToNext;
 
      	// Se o elemento era unico na fila, atualiza o final da fila tamb�m para NULL:
         if ( desc->pointerToBeginQueue == NULL )
+        {
             desc->pointerToEndQueue = NULL;
+        }
 
         helper->pointerToNext = NULL;
         printf("Valor do elemento excluído: %d \n", helper->value);
         free(helper);
-    } else
+    }
+    else
         puts("A fila está vazia!");
 }
 
@@ -77,13 +94,15 @@ void showQueue(descritor* desc)
 {
     element* firstElement = desc->pointerToBeginQueue;
 
-    if ( firstElement != NULL ) {
+    if ( firstElement != NULL )
+    {
         element* element = firstElement;
         do {
             printf(" %d ", element->value);
             element = element->pointerToNext;
         } while ( element != NULL );
-    } else
+    }
+    else
         puts("Fila Vazia.");
 }
 
@@ -112,7 +131,9 @@ int main(int argc, char const *argv[])
 	{
         createMenu();
         scanf ( "%d", &option );
+
         system("clear");
+
         switch( option )
 		{
             case EXIT:
