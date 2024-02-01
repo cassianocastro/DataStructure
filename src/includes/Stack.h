@@ -23,38 +23,37 @@ Options;
 /**
  *
  */
-typedef struct
+struct element
 {
     int valor;
 
     struct element* anterior;
-}
-element;
+};
 
 /**
  *
  */
-element* createElement(int);
+struct element* createElement(int);
 
 /**
  * Add elements in the stack
  */
-element* push(element*, int);
+struct element* push(struct element*, int);
 
 /**
  *
  */
-bool isEmpty(element*);
+bool isEmpty(struct element*);
 
 /**
  *
  */
-element* pop(element*);
+struct element* pop(struct element*);
 
 /**
  *
  */
-void showStack(element*);
+void showStack(struct element*);
 
 /**
  *
