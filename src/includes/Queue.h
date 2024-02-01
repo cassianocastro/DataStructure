@@ -23,13 +23,12 @@ Options;
 /**
  *
  */
-typedef struct
+struct element
 {
     int value;
 
     struct element* pointerToNext;
-}
-element;
+};
 
 /**
  * Definicao do descritor.
@@ -46,7 +45,7 @@ descritor;
 /**
  *
  */
-element* createElement(void);
+struct element* createElement(void);
 
 /**
  *
@@ -56,7 +55,7 @@ bool isEmpty(descritor*);
 /**
  *
  */
-void enQueue(descritor*, element*);
+void enQueue(descritor*, struct element*);
 
 /**
  *
