@@ -14,7 +14,7 @@ element* push(element* topo, int valor)
 {
     element* aux = topo;
 
-    topo = createElement(topo, valor);
+    topo = createElement(valor);
     topo->anterior = aux;
 
     return topo;
