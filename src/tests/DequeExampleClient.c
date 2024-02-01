@@ -11,7 +11,7 @@ int main(void)
     No* list = NULL;
 
     // criar um lista apontada por n com o primerio elemento
-    No* n  = createElement(35);
+    // No* n  = createElement(35);
     No* n2 = createElement(50);
     No* n3 = createElement(30);
     No* n4 = createElement(55);
