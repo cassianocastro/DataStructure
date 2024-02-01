@@ -32,7 +32,7 @@ int main(void)
     unsigned int option = 0u;
     int valor = 0;
 
-    element* topo = NULL;
+    struct element* topo = NULL;
 
     while ( true )
     {
