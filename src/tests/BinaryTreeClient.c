@@ -32,7 +32,7 @@ void clearConsole(void)
 /**
  *
  */
-int main(int argc, const char** argv)
+int main(void)
 {
     setlocale(LC_ALL, "");
 

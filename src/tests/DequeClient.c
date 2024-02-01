@@ -3,7 +3,7 @@
 /**
  *
  */
-int main(int argc, const char** argv)
+int main(void)
 {
     setlocale(LC_ALL, "");
 
@@ -11,7 +11,7 @@ int main(int argc, const char** argv)
     No* list = NULL;
 
     // Criar uma lista apontada por n com o primeiro elemento
-    No* n  = createElement(35);
+    // No* n  = createElement(35);
     No* n2 = createElement(50);
     No* n3 = createElement(30);
     No* n4 = createElement(55);
