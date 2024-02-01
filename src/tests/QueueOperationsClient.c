@@ -33,7 +33,7 @@ int main(void)
 
     unsigned int option = 0u;
 
-    element* newElement = NULL;
+    struct element* newElement = NULL;
     descritor* desc = (descritor*) malloc(sizeof(descritor));
 
     desc->pointerToBeginQueue = NULL;

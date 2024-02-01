@@ -1,13 +1,13 @@
 #include "../includes/QueueOperations.h"
 
-element* createElement(void)
+struct element* createElement(void)
 {
     int value = 0;
 
     printf("Informe um valor para o novo elemento da fila: ");
     scanf("%d", &value);
 
-    element* newElement = (element*) malloc(sizeof(element));
+    struct element* newElement = (struct element*) malloc(sizeof(struct element));
 
     newElement->value = value;
     newElement->pointerToNext = NULL;
@@ -25,7 +25,7 @@ bool isEmpty(descritor* desc)
     return false;
 }
 
-void enQueue(descritor* desc, element* newElement)
+void enQueue(descritor* desc, struct element* newElement)
 {
     if ( isEmpty(desc) )
     {
@@ -34,9 +34,10 @@ void enQueue(descritor* desc, element* newElement)
     }
     else
     {
-        element* lastElement       = desc->pointerToEndQueue;
-        lastElement->pointerToNext = newElement;
-        desc->pointerToEndQueue    = newElement;
+        struct element* lastElement = desc->pointerToEndQueue;
+
+        lastElement->pointerToNext  = newElement;
+        desc->pointerToEndQueue     = newElement;
     }
 }
 
@@ -44,7 +45,7 @@ void deQueue(descritor* desc)
 {
     if ( not isEmpty(desc) )
     {
-        element* helper = desc->pointerToBeginQueue;
+        struct element* helper = desc->pointerToBeginQueue;
 
         desc->pointerToBeginQueue = helper->pointerToNext;
 
@@ -65,11 +66,11 @@ void deQueue(descritor* desc)
 
 void showQueue(descritor* desc)
 {
-    element* firstElement = desc->pointerToBeginQueue;
+    struct element* firstElement = desc->pointerToBeginQueue;
 
     if ( firstElement != NULL )
     {
-        element* element = firstElement;
+        struct element* element = firstElement;
 
         do {
             printf(" %d ", element->value);
