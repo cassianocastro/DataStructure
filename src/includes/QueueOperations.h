@@ -1,6 +1,6 @@
-#ifndef QUEUE_OPEARTIONS_H
+#ifndef QUEUE_OPERATIONS_H
 
-#define QUEUE_OPEARTIONS_H
+#define QUEUE_OPERATIONS_H
 
 #include <iso646.h>
 #include <locale.h>
