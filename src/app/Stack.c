@@ -1,8 +1,8 @@
 #include "../includes/Stack.h"
 
-element* createElement(int valor)
+struct element* createElement(int valor)
 {
-    element* novo  = (element*) malloc(sizeof(element));
+    struct element* novo = (struct element*) malloc(sizeof(struct element));
 
     novo->valor    = valor;
     novo->anterior = NULL;
@@ -10,9 +10,9 @@ element* createElement(int valor)
     return novo;
 }
 
-element* push(element* topo, int valor)
+struct element* push(struct element* topo, int valor)
 {
-    element* aux = topo;
+    struct element* aux = topo;
 
     topo = createElement(valor);
     topo->anterior = aux;
@@ -20,16 +20,16 @@ element* push(element* topo, int valor)
     return topo;
 }
 
-bool isEmpty(element* topo)
+bool isEmpty(struct element* topo)
 {
     return topo == NULL;
 }
 
-element* pop(element* topo)
+struct element* pop(struct element* topo)
 {
     if ( not isEmpty(topo) )
     {
-        element* aux = topo;
+        struct element* aux = topo;
         topo = topo->anterior;
 
         free(aux);
@@ -42,7 +42,7 @@ element* pop(element* topo)
     return topo;
 }
 
-void showStack(element* topo)
+void showStack(struct element* topo)
 {
     bool isFirst = true;
 
