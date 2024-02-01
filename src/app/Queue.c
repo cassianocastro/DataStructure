@@ -1,15 +1,15 @@
 #include "../includes/Queue.h"
 
-element* createElement(void)
+struct element* createElement(void)
 {
     int value = 0;
 
     printf("Informe um valor para o novo elemento da fila: ");
-    scanf("%d", &value);
+    scanf(" %d", &value);
 
-    element* newElement       = malloc(sizeof(element));
-    newElement->value         = value;
-    newElement->pointerToNext = NULL;
+    struct element* newElement = malloc(sizeof(struct element));
+    newElement->value          = value;
+    newElement->pointerToNext  = NULL;
 
     return newElement;
 }
@@ -24,18 +24,18 @@ bool isEmpty(descritor* desc)
     return false;
 }
 
-void enQueue(descritor* desc, element* newElement)
+void enQueue(descritor* desc, struct element* newElement)
 {
     if ( isEmpty(desc) )
     {
-        desc->pointerToBeginQueue  = newElement;
-        desc->pointerToEndQueue    = newElement;
+        desc->pointerToBeginQueue = newElement;
+        desc->pointerToEndQueue   = newElement;
     }
     else
     {
-        element* lastElement       = desc->pointerToEndQueue;
-        lastElement->pointerToNext = newElement;
-        desc->pointerToEndQueue    = newElement;
+        struct element* lastElement = desc->pointerToEndQueue;
+        lastElement->pointerToNext  = newElement;
+        desc->pointerToEndQueue     = newElement;
     }
 }
 
@@ -43,7 +43,7 @@ void deQueue(descritor* desc)
 {
     if ( not isEmpty(desc) )
     {
-        element* helper           = desc->pointerToBeginQueue;
+        struct element* helper    = desc->pointerToBeginQueue;
         desc->pointerToBeginQueue = helper->pointerToNext;
 
      	// Se o elemento era unico na fila, atualiza o final da fila tamb�m para NULL:
@@ -62,11 +62,11 @@ void deQueue(descritor* desc)
 
 void showQueue(descritor* desc)
 {
-    element* firstElement = desc->pointerToBeginQueue;
+    struct element* firstElement = desc->pointerToBeginQueue;
 
     if ( firstElement != NULL )
     {
-        element* element = firstElement;
+        struct element* element = firstElement;
 
         do {
             printf(" %d ", element->value);
