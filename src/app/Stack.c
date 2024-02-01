@@ -1,6 +1,6 @@
 #include "../includes/Stack.h"
 
-element* createElement(element* topo, int valor)
+element* createElement(int valor)
 {
     element* novo  = (element*) malloc(sizeof(element));
 
