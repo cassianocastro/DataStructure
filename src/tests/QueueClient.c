@@ -10,7 +10,7 @@ unsigned int createMenu(void)
         "\n1. Incluir | 2. Excluir | 3. Exibir | 0. Sair"
         "\nOpção\? "
     );
-    scanf("%u", &option);
+    scanf(" %u", &option);
 
     return option;
 }
@@ -33,7 +33,7 @@ int main(int argc, const char** argv)
 
     unsigned int option = 0u;
 
-    element* newElement = NULL;
+    struct element* newElement = NULL;
     descritor* desc = (descritor*) malloc(sizeof(descritor));
 
     desc->pointerToBeginQueue = NULL;
