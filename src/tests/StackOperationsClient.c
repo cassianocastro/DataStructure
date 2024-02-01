@@ -24,13 +24,35 @@ void clearConsole(void)
 #endif
 }
 
+void addonStack(struct element** top)
+{
+    int value = 0;
+
+    printf("Informe um valor para o novo elemento da pilha: ");
+    scanf("%d", &value);
+
+    *top = push(*top, value);
+}
+
+void deleteOfTheStack(struct element** top)
+{
+    *top = pop(*top);
+}
+
+void printStack(struct element** top)
+{
+    if ( not isEmpty(*top) )
+        showStack(*top);
+    else
+        puts("Pilha Vazia.");
+}
+
 /**
  *
  */
 int main(void)
 {
     unsigned int option = 0u;
-    int valor = 0;
 
     struct element* topo = NULL;
 
@@ -43,19 +65,13 @@ int main(void)
         switch ( option )
         {
             case PUSH:
-                printf("Informe um valor para o novo elemento da pilha: ");
-                scanf("%d", &valor);
-
-                topo = push(topo, valor);
+                addonStack(&topo);
                 break;
             case POP:
-                topo = pop(topo);
+                deleteOfTheStack(&topo);
                 break;
             case SHOWSTACK:
-                if ( not isEmpty(topo) )
-                    showStack(topo);
-                else
-                    puts("Pilha Vazia.");
+                printStack(&topo);
                 break;
             case EXIT:
                 exit(EXIT_SUCCESS);
