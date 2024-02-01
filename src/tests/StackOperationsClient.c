@@ -52,7 +52,10 @@ int main(void)
                 topo = pop(topo);
                 break;
             case SHOWSTACK:
-                ( not isEmpty(topo) ) ? showStack(topo) : puts("Pilha Vazia.");
+                if ( not isEmpty(topo) )
+                    showStack(topo);
+                else
+                    puts("Pilha Vazia.");
                 break;
             case EXIT:
                 exit(EXIT_SUCCESS);
