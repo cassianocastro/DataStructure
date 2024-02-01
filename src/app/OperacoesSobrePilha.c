@@ -1,8 +1,8 @@
 #include "../includes/StackOperations.h"
 
-element* createElement(element* topo, int valor)
+element* createElement(int valor)
 {
-    element* novo  = malloc(sizeof(element));
+    element* novo = malloc(sizeof(element));
 
     novo->valor    = valor;
     novo->anterior = NULL;
