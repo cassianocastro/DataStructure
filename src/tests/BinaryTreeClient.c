@@ -15,7 +15,7 @@ unsigned int createMenu(void)
         "\n0. Sair"
         "\nOpção\? "
     );
-    scanf("%i", &option);
+    scanf("%u", &option);
 
     return option;
 }
