@@ -2,7 +2,7 @@
 
 struct element* createElement(int valor)
 {
-    struct element* novo = malloc(sizeof(struct element));
+    struct element* novo = (struct element*) malloc(sizeof(struct element));
 
     novo->valor    = valor;
     novo->anterior = NULL;
