@@ -32,7 +32,7 @@ struct element
 
 /**
  * Definicao do descritor.
- * Ponteiros que armazezam o inicio e o final da fila
+ * Ponteiros que armazenam o inicio e o final da fila
  */
 typedef struct
 {
