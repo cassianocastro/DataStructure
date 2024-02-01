@@ -19,12 +19,12 @@ void insere_folha(nodo** arv, char info)
     }
     else
     {
-        //se a informacao e menor que a informacao da arvore, insere a esquerda
+        // Se a informacao e menor que a informacao da arvore, insere a esquerda
         if ( info < (*arv)->info )
         {
             puts("Inserindo à Esquerda...");
             insere_folha(&(*arv)->esquerda, info);
-            //se a informacao e maior que a informacao da arvore, insere a direita
+            // Se a informacao e maior que a informacao da arvore, insere a direita
         }
         else if ( info > (*arv)->info )
         {
