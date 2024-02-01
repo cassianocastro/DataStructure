@@ -10,7 +10,7 @@ unsigned int createMenu(void)
         "\n1. Incluir | 2. Excluir | 3. Exibir | 0. Sair"
         "\nOpção\? "
     );
-    scanf("%d", &option);
+    scanf("%u", &option);
 
     return option;
 }
