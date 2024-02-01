@@ -33,7 +33,7 @@ element;
 /**
  *
  */
-element* createElement(element*, int);
+element* createElement(int);
 
 /**
  * Add elements in the stack
