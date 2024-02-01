@@ -54,7 +54,7 @@ int main(void)
 {
     unsigned int option = 0u;
 
-    struct element* topo = NULL;
+    struct element* e = NULL;
 
     while ( true )
     {
@@ -65,13 +65,13 @@ int main(void)
         switch ( option )
         {
             case PUSH:
-                addonStack(&topo);
+                addonStack(&e);
                 break;
             case POP:
-                deleteOfTheStack(&topo);
+                deleteOfTheStack(&e);
                 break;
             case SHOWSTACK:
-                printStack(&topo);
+                printStack(&e);
                 break;
             case EXIT:
                 exit(EXIT_SUCCESS);
